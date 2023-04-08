@@ -4,9 +4,6 @@ using UnityEngine.XR;
 
 namespace DeemoRebirth {
     public class DeemoRebirth :MelonMod {
-        private GUIStyle labelStyle;
-
-
         public override void OnInitializeMelon () {
             Config.Initialize();
             Modules.DisableVSync.Methods.Init();
@@ -14,9 +11,7 @@ namespace DeemoRebirth {
 
         public override void OnApplicationStart () // Runs after Game Initialization.
         {
-            labelStyle = new GUIStyle();
-            labelStyle.fontSize = 24;
-            labelStyle.normal.textColor = Color.white;
+            Modules.Watermark.Events.OnApplicationStart();
         }
 
         public override void OnApplicationLateStart () // Runs after OnApplicationStart.
@@ -53,7 +48,7 @@ namespace DeemoRebirth {
         public override void OnGUI () // Can run multiple times per frame. Mostly used for Unity's IMGUI.
         {
             // MelonLogger.Msg("OnGUI");
-            GUI.Label(new Rect(10, 10, 100, 25), $"Deemo Rebirth v{BuildInfo.Version}", labelStyle);
+            Modules.Watermark.Events.OnGUI();
         }
 
         public override void OnApplicationQuit () // Runs when the Game is told to Close.
