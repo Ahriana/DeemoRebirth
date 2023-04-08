@@ -2,15 +2,6 @@
 using UnityEngine.XR;
 
 namespace DeemoRebirth {
-    public static class BuildInfo {
-        public const string Name = "DeemoRebirth";
-        public const string Description = "Collection of mods to aid in more Competitive play";
-        public const string Author = "Ahriana";
-        public const string Company = "ScoreSpy";
-        public const string Version = "1.0.0";
-        public const string DownloadLink = null; // Download Link for the Mod.  (Set as null if none)
-    }
-
     public class DeemoRebirth :MelonMod {
         public override void OnInitializeMelon () {
             Config.Initialize();

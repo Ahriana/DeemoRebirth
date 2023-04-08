@@ -1,6 +1,15 @@
 ﻿using MelonLoader;
 
 namespace DeemoRebirth {
+    public static class BuildInfo {
+        public const string Name = "DeemoRebirth";
+        public const string Description = "Collection of mods to aid in more Competitive play";
+        public const string Author = "Ahriana";
+        public const string Company = "ScoreSpy";
+        public const string Version = "1.0.0";
+        public const string DownloadLink = "https://github.com/Ahriana/DeemoRebirth"; // Download Link for the Mod.  (Set as null if none)
+    }
+
     public static class Config {
         private static readonly string FILEPATH = "UserData/Rebirth.cfg";
 
@@ -16,7 +25,7 @@ namespace DeemoRebirth {
             _competitiveCategory.CreateEntry<bool>("Auto Song Select", true, null, "Spawn the song book when entering the world");
             _competitiveCategory.CreateEntry<bool>("Replace Song Book Animations", true, null, "This will speed-up, replace and simplify SongBook animations for faster navigation etc");
 
-            _performanceCategory.SaveToFile();
+            _competitiveCategory.SaveToFile();
 
             // Performance config setup
             _performanceCategory = MelonPreferences.CreateCategory("Performance");
@@ -25,7 +34,7 @@ namespace DeemoRebirth {
             _performanceCategory.CreateEntry<bool>("Remove Gameplay Backgrounds", true, null, "Disable stage backgrounds to increase performance");
             _performanceCategory.CreateEntry<bool>("Disable VSync", true, null, "Bypasses the game's VSync clock (Unlimited FPS)");
 
-            _competitiveCategory.SaveToFile();
+            _performanceCategory.SaveToFile();
         }
 
         public static class Competitive {

@@ -27,6 +27,9 @@
     <Prefer32Bit>false</Prefer32Bit>
     <DebugSymbols>false</DebugSymbols>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony">
       <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\DEEMO -Reborn-\MelonLoader\0Harmony.dll</HintPath>
@@ -231,10 +234,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config.cs" />
-    <Compile Include="Modules\AutoSongBook.cs" />
-    <Compile Include="Modules\DisableVSync.cs" />
-    <Compile Include="Modules\RemoveGameplayBackgrounds.cs" />
-    <Compile Include="Modules\SkipIntro.cs" />
+    <Compile Include="Modules\Competitive\AutoSongBook.cs" />
+    <Compile Include="Modules\Performance\DisableVSync.cs" />
+    <Compile Include="Modules\Performance\RemoveGameplayBackgrounds.cs" />
+    <Compile Include="Modules\Competitive\ReplaceSongBookAnimations.cs" />
+    <Compile Include="Modules\Competitive\SkipIntro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Main.cs" />
   </ItemGroup>
