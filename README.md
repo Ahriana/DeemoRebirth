@@ -1,4 +1,5 @@
 # Deemo Reborn Mod
+[![Discord](https://img.shields.io/discord/1084170032768102482)](https://discord.gg/MDS8E27j7U)
 
 This is a mod for the game Deemo Reborn that adds new features and options to enhance gameplay and performance. The mod requires [MelonLoader](https://melonwiki.xyz) to be installed to work.
 
@@ -9,6 +10,7 @@ This is a mod for the game Deemo Reborn that adds new features and options to en
 - Speed up and simplify the song book animations for faster navigation
 - Disable stage backgrounds to increase performance
 - Bypass the game\'s VSync clock for unlimited FPS
+- Change the default difficulty level for song selection
 
 ## Installation
 
@@ -26,6 +28,7 @@ The mod includes a configuration file that can be used to customize the mod\'s f
 - **Skip Intro**: Skips all intro buttons, speeds up animations, and jumps you into save select. This cannot be used if you plan to use VR mode.
 - **Auto Song Select**: Spawn the song book when entering the world.
 - **Replace Song Book Animations**: This will speed-up, replace and simplify SongBook animations for faster navigation etc.
+- **Default Difficulty**: Changes what difficulty will be selected in song select: Off = 0, Easy = 1, Normal = 2, Hard = 3.
 
 ### Performance category
 
@@ -39,4 +42,5 @@ To modify the configuration, open the `Reborn.cfg` file in a text editor and cha
 If you encounter any issues with the mod, please report them on the [issues page](https://github.com/Ahriana/DeemoRebirth/issues).
 
 You can also join our Discord server to ask for help or discuss the mod with other players:
+
 [![Discord](https://img.shields.io/discord/1084170032768102482)](https://discord.gg/MDS8E27j7U)
