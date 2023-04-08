@@ -24,7 +24,7 @@ namespace DeemoRebirth.Modules.AutoSongBook {
         public static void JumpIntoSongSelect () {
             SongSelectBookUI component = GameObject.Find("StaticCanvas (TV)").transform.Find("SongSelectBookUI").gameObject.GetComponent<SongSelectBookUI>();
             component.ShowUI();
-            component.SetHardDifficulty();
+            // component.SetHardDifficulty();
         }
 
         public static IEnumerator WaitToJump () {
