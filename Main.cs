@@ -1,5 +1,6 @@
 ﻿using MelonLoader;
 
+// steam debug params: --melonloader.launchdebugger --melonloader.debug
 namespace DeemoRebirth {
     public class DeemoRebirth :MelonMod {
         public override void OnInitializeMelon () {
@@ -12,6 +13,7 @@ namespace DeemoRebirth {
         {
             // MelonLogger.Msg("OnApplicationStart");
             Modules.Watermark.Events.OnApplicationStart();
+            Modules.CheckForUpdates.Events.OnApplicationStart();
         }
 
         public override void OnApplicationLateStart () // Runs after OnApplicationStart.

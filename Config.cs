@@ -6,7 +6,7 @@ namespace DeemoRebirth {
         public const string Description = "Collection of mods to aid in more Competitive play";
         public const string Author = "Ahriana";
         public const string Company = "ScoreSpy";
-        public const string Version = "1.0.0";
+        public const string Version = "1.1.0";
         public const string DownloadLink = "https://github.com/Ahriana/DeemoRebirth"; // Download Link for the Mod.  (Set as null if none)
     }
 

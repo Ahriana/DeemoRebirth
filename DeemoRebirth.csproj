@@ -236,6 +236,7 @@
     <Compile Include="Config.cs" />
     <Compile Include="Modules\Competitive\AutoSongBook.cs" />
     <Compile Include="Modules\Competitive\DefaultDifficulty.cs" />
+    <Compile Include="Modules\Misc\CheckForUpdates.cs" />
     <Compile Include="Modules\Misc\Watermark.cs" />
     <Compile Include="Modules\Performance\DisableVSync.cs" />
     <Compile Include="Modules\Performance\RemoveGameplayBackgrounds.cs" />
