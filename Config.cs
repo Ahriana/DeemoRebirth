@@ -31,7 +31,7 @@ namespace DeemoRebirth {
             _competitiveCategory.SetFilePath(FILEPATH);
 
             _competitiveCategory.CreateEntry<bool>("Skip Intro", true, null, "Skips all intro buttons, speeds up animations, and jumps you into save select. This cannot be used if you plan to use VR mode");
-            _competitiveCategory.CreateEntry<bool>("Auto Song Select", true, null, "Spawn the song book when entering the world");
+            _competitiveCategory.CreateEntry<bool>("Auto Song Select", false, null, "Spawn the song book when entering the world");
             _competitiveCategory.CreateEntry<bool>("Replace Song Book Animations", true, null, "This will speed-up, replace and simplify SongBook animations for faster navigation etc");
             _competitiveCategory.CreateEntry<int>("Default Difficulty", 0, null, "Changes what difficulty will be selected in song select: Off = 0, Easy = 1, Normal = 2, Hard = 3");
 
@@ -41,7 +41,7 @@ namespace DeemoRebirth {
             _performanceCategory = MelonPreferences.CreateCategory("Performance");
             _performanceCategory.SetFilePath(FILEPATH);
 
-            _performanceCategory.CreateEntry<bool>("Remove Gameplay Backgrounds", true, null, "Disable stage backgrounds to increase performance");
+            _performanceCategory.CreateEntry<bool>("Remove Gameplay Backgrounds", false, null, "Disable stage backgrounds to increase performance");
             _performanceCategory.CreateEntry<bool>("Disable VSync", true, null, "Bypasses the game's VSync clock (Unlimited FPS)");
 
             _performanceCategory.SaveToFile();
