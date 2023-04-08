@@ -13,10 +13,19 @@ namespace DeemoRebirth {
     public static class Config {
         private static readonly string FILEPATH = "UserData/Rebirth.cfg";
 
+        private static MelonPreferences_Category _coreCategory;
         private static MelonPreferences_Category _competitiveCategory;
         private static MelonPreferences_Category _performanceCategory;
 
         public static void Initialize () {
+            // Core config setup
+            _coreCategory = MelonPreferences.CreateCategory("Core");
+            _coreCategory.SetFilePath(FILEPATH);
+
+            _coreCategory.CreateEntry<bool>("Mod Enabled", true, null, "Master Toggle to Enable or Disable the mod");
+
+            _coreCategory.SaveToFile();
+
             // Competitive config setup
             _competitiveCategory = MelonPreferences.CreateCategory("Competitive");
             _competitiveCategory.SetFilePath(FILEPATH);
@@ -38,6 +47,10 @@ namespace DeemoRebirth {
             _performanceCategory.SaveToFile();
         }
 
+        public static class Core {
+            public static bool ModEnabled => _coreCategory.GetEntry<bool>("Mod Enabled").Value;
+        }
+
         public static class Competitive {
             public static bool SkipIntro => _competitiveCategory.GetEntry<bool>("Skip Intro").Value;
             public static bool AutoSongBook => _competitiveCategory.GetEntry<bool>("Auto Song Select").Value;
@@ -49,6 +62,5 @@ namespace DeemoRebirth {
             public static bool RemoveGameplayBackgrounds => _performanceCategory.GetEntry<bool>("Remove Gameplay Backgrounds").Value;
             public static bool DisableVsync => _performanceCategory.GetEntry<bool>("Disable VSync").Value;
         }
-
     }
 }

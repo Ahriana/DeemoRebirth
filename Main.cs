@@ -6,6 +6,12 @@ namespace DeemoRebirth {
         public override void OnInitializeMelon () {
             // MelonLogger.Msg("OnInitializeMelon");
             Config.Initialize();
+
+            if (!Config.Core.ModEnabled) {
+                MelonLogger.Warning("DeemoRebirth disabled, Unloading");
+                this.Unregister();
+            }
+
             Modules.DisableVSync.Methods.Init();
         }
 
