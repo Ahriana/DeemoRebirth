@@ -24,6 +24,7 @@ namespace DeemoRebirth {
             _competitiveCategory.CreateEntry<bool>("Skip Intro", true, null, "Skips all intro buttons, speeds up animations, and jumps you into save select. This cannot be used if you plan to use VR mode");
             _competitiveCategory.CreateEntry<bool>("Auto Song Select", true, null, "Spawn the song book when entering the world");
             _competitiveCategory.CreateEntry<bool>("Replace Song Book Animations", true, null, "This will speed-up, replace and simplify SongBook animations for faster navigation etc");
+            _competitiveCategory.CreateEntry<int>("Default Difficulty", 0, null, "Changes what difficulty will be selected in song select: Off = 0, Easy = 1, Normal = 2, Hard = 3");
 
             _competitiveCategory.SaveToFile();
 
@@ -41,6 +42,7 @@ namespace DeemoRebirth {
             public static bool SkipIntro => _competitiveCategory.GetEntry<bool>("Skip Intro").Value;
             public static bool AutoSongBook => _competitiveCategory.GetEntry<bool>("Auto Song Select").Value;
             public static bool ReplaceSongBookAnimations => _competitiveCategory.GetEntry<bool>("Replace Song Book Animations").Value;
+            public static int DefaultDifficulty => _competitiveCategory.GetEntry<int>("Default Difficulty").Value;
         }
 
         public static class Performance {
