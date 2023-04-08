@@ -1,16 +1,16 @@
 ﻿using MelonLoader;
-using UnityEngine;
-using UnityEngine.XR;
 
 namespace DeemoRebirth {
     public class DeemoRebirth :MelonMod {
         public override void OnInitializeMelon () {
+            // MelonLogger.Msg("OnInitializeMelon");
             Config.Initialize();
             Modules.DisableVSync.Methods.Init();
         }
 
         public override void OnApplicationStart () // Runs after Game Initialization.
         {
+            // MelonLogger.Msg("OnApplicationStart");
             Modules.Watermark.Events.OnApplicationStart();
         }
 
@@ -26,8 +26,8 @@ namespace DeemoRebirth {
 
         public override void OnSceneWasInitialized (int buildindex, string sceneName) // Runs when a Scene has Initialized and is passed the Scene's Build Index and Name.
         {
-            Modules.RemoveGameplayBackgrounds.Events.OnSceneWasInitialized(buildindex, sceneName);
             // MelonLogger.Msg("OnSceneWasInitialized: " + buildindex.ToString() + " | " + sceneName);
+            Modules.RemoveGameplayBackgrounds.Events.OnSceneWasInitialized(buildindex, sceneName);
         }
 
         public override void OnUpdate () // Runs once per frame.
