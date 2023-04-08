@@ -9,16 +9,6 @@ namespace DeemoRebirth.Modules.Watermark {
         public static GUIStyle LabelStyle { get; set; }
     }
 
-    internal class Methods {
-        public static void DisableAssets () {
-            GameObject gameObject = GameObject.Find("MainCameraController");
-            Object.Destroy(gameObject.transform.GetChild(3).gameObject);
-            Object.Destroy(gameObject.transform.GetChild(2).gameObject);
-            Object.Destroy(gameObject.transform.GetChild(1).gameObject);
-            Object.Destroy(gameObject.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject);
-            Object.Destroy(GameObject.Find("Scene_Switch").gameObject);
-        }
-    }
     internal class Events {
         public static void OnApplicationStart () {
             Configuration.LabelStyle = new GUIStyle();
