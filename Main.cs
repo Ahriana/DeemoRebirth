@@ -20,12 +20,12 @@ namespace DeemoRebirth {
             // MelonLogger.Msg("OnApplicationStart");
             Modules.Watermark.Events.OnApplicationStart();
             Modules.CheckForUpdates.Events.OnApplicationStart();
-            Modules.DiscordRP.Events.OnApplicationStart();
         }
 
         public override void OnApplicationLateStart () // Runs after OnApplicationStart.
         {
             // MelonLogger.Msg("OnApplicationLateStart");
+            Modules.DiscordRP.Events.OnApplicationStart();
         }
 
         public override void OnSceneWasLoaded (int buildindex, string sceneName) // Runs when a Scene has Loaded and is passed the Scene's Build Index and Name.

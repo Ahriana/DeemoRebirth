@@ -15,7 +15,7 @@ namespace DeemoRebirth {
 
         private static MelonPreferences_Category _coreCategory;
         private static MelonPreferences_Category _competitiveCategory;
-        private static MelonPreferences_Category _enhancementsCategory
+        private static MelonPreferences_Category _enhancementsCategory;
         private static MelonPreferences_Category _performanceCategory;
 
         public static void Initialize () {
@@ -42,7 +42,7 @@ namespace DeemoRebirth {
             _enhancementsCategory = MelonPreferences.CreateCategory("Enhancements");
             _enhancementsCategory.SetFilePath(FILEPATH);
 
-            _enhancementsCategory.CreateEntry<bool>("DiscordRP", true, null, "Enable Discord Rich Presence intergration. Note: Requires \"discord_game_sdk.dll\" be placed in \"UserLibs\" folder of the game");
+            _enhancementsCategory.CreateEntry<bool>("Discord RP", true, null, "Enable Discord Rich Presence intergration. Note: Requires \"discord_game_sdk.dll\" be placed in \"UserLibs\" folder of the game");
 
             _enhancementsCategory.SaveToFile();
 
@@ -70,7 +70,7 @@ namespace DeemoRebirth {
         }
 
         public static class Enhancements {
-            public static bool DiscordRP => _coreCategory.GetEntry<bool>("DiscordRP").Value;
+            public static bool DiscordRP => _enhancementsCategory.GetEntry<bool>("Discord RP").Value;
         }
 
         public static class Performance {
