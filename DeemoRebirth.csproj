@@ -234,8 +234,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config.cs" />
+    <Compile Include="Libs\DiscordGameSDK\ActivityManager.cs" />
+    <Compile Include="Libs\DiscordGameSDK\Constants.cs" />
+    <Compile Include="Libs\DiscordGameSDK\Core.cs" />
+    <Compile Include="Libs\DiscordGameSDK\ImageManager.cs" />
+    <Compile Include="Libs\DiscordGameSDK\LobbyManager.cs" />
+    <Compile Include="Libs\DiscordGameSDK\StorageManager.cs" />
+    <Compile Include="Libs\DiscordGameSDK\StoreManager.cs" />
     <Compile Include="Modules\Competitive\AutoSongBook.cs" />
     <Compile Include="Modules\Competitive\DefaultDifficulty.cs" />
+    <Compile Include="Modules\Enhancements\DiscordRP.cs" />
     <Compile Include="Modules\Misc\CheckForUpdates.cs" />
     <Compile Include="Modules\Misc\Watermark.cs" />
     <Compile Include="Modules\Performance\DisableVSync.cs" />
@@ -245,6 +253,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Main.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy /y /q /f "$(TargetPath)" "C:\Program Files (x86)\Steam\steamapps\common\DEEMO -Reborn-\Mods\"

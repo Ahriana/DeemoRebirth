@@ -1,7 +1,4 @@
 ﻿using HarmonyLib;
-using MelonLoader;
-using System.Collections;
-using UnityEngine;
 
 namespace DeemoRebirth.Modules.DefaultDifficulty {
     [HarmonyPatch(typeof(SongSelectBookUI), "ShowUI")]

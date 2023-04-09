@@ -1,6 +1,6 @@
-﻿using MelonLoader;
+﻿using System.Text.RegularExpressions;
 using System.Net;
-using System.Text.RegularExpressions;
+using MelonLoader;
 
 namespace DeemoRebirth.Modules.CheckForUpdates {
     public static class Configuration {

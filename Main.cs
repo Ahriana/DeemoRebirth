@@ -20,6 +20,7 @@ namespace DeemoRebirth {
             // MelonLogger.Msg("OnApplicationStart");
             Modules.Watermark.Events.OnApplicationStart();
             Modules.CheckForUpdates.Events.OnApplicationStart();
+            Modules.DiscordRP.Events.OnApplicationStart();
         }
 
         public override void OnApplicationLateStart () // Runs after OnApplicationStart.
@@ -30,6 +31,7 @@ namespace DeemoRebirth {
         public override void OnSceneWasLoaded (int buildindex, string sceneName) // Runs when a Scene has Loaded and is passed the Scene's Build Index and Name.
         {
             // MelonLogger.Msg("OnSceneWasLoaded: " + buildindex.ToString() + " | " + sceneName);
+            Modules.DiscordRP.Events.OnSceneWasLoaded(buildindex, sceneName);
         }
 
         public override void OnSceneWasInitialized (int buildindex, string sceneName) // Runs when a Scene has Initialized and is passed the Scene's Build Index and Name.
@@ -40,6 +42,7 @@ namespace DeemoRebirth {
 
         public override void OnUpdate () // Runs once per frame.
         {
+            Modules.DiscordRP.Events.OnUpdate();
             // MelonLogger.Msg("OnUpdate");
         }
 
@@ -61,6 +64,7 @@ namespace DeemoRebirth {
 
         public override void OnApplicationQuit () // Runs when the Game is told to Close.
         {
+            Modules.DiscordRP.Events.OnApplicationQuit();
             // MelonLogger.Msg("OnApplicationQuit");
         }
 

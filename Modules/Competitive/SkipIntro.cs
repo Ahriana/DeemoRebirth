@@ -1,5 +1,5 @@
-﻿using HarmonyLib;
-using MelonLoader;
+﻿using MelonLoader;
+using HarmonyLib;
 
 namespace DeemoRebirth.Modules.SkipIntro {
     [HarmonyPatch(typeof(SystemMessageUI), "ShowUI")]

@@ -1,7 +1,7 @@
-﻿using HarmonyLib;
-using MelonLoader;
+﻿using UnityEngine;
 using System.Collections;
-using UnityEngine;
+using MelonLoader;
+using HarmonyLib;
 
 namespace DeemoRebirth.Modules.AutoSongBook {
     public static class Configuration {

@@ -15,6 +15,7 @@ namespace DeemoRebirth {
 
         private static MelonPreferences_Category _coreCategory;
         private static MelonPreferences_Category _competitiveCategory;
+        private static MelonPreferences_Category _enhancementsCategory
         private static MelonPreferences_Category _performanceCategory;
 
         public static void Initialize () {
@@ -37,6 +38,15 @@ namespace DeemoRebirth {
 
             _competitiveCategory.SaveToFile();
 
+            // Core config setup
+            _enhancementsCategory = MelonPreferences.CreateCategory("Enhancements");
+            _enhancementsCategory.SetFilePath(FILEPATH);
+
+            _enhancementsCategory.CreateEntry<bool>("DiscordRP", true, null, "Enable Discord Rich Presence intergration. Note: Requires \"discord_game_sdk.dll\" be placed in \"UserLibs\" folder of the game");
+
+            _enhancementsCategory.SaveToFile();
+
+
             // Performance config setup
             _performanceCategory = MelonPreferences.CreateCategory("Performance");
             _performanceCategory.SetFilePath(FILEPATH);
@@ -45,6 +55,7 @@ namespace DeemoRebirth {
             _performanceCategory.CreateEntry<bool>("Disable VSync", true, null, "Bypasses the game's VSync clock (Unlimited FPS)");
 
             _performanceCategory.SaveToFile();
+
         }
 
         public static class Core {
@@ -56,6 +67,10 @@ namespace DeemoRebirth {
             public static bool AutoSongBook => _competitiveCategory.GetEntry<bool>("Auto Song Select").Value;
             public static bool ReplaceSongBookAnimations => _competitiveCategory.GetEntry<bool>("Replace Song Book Animations").Value;
             public static int DefaultDifficulty => _competitiveCategory.GetEntry<int>("Default Difficulty").Value;
+        }
+
+        public static class Enhancements {
+            public static bool DiscordRP => _coreCategory.GetEntry<bool>("DiscordRP").Value;
         }
 
         public static class Performance {
