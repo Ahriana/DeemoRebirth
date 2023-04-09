@@ -8,20 +8,25 @@ This is a mod for the game Deemo Reborn that adds new features and options to en
 - Skip intro videos, menus and animations to get straight to the game
 - Automatically open the song book when entering the world
 - Speed up and simplify the song book animations for faster navigation
-- Disable stage backgrounds to increase performance
-- Bypass the game\'s VSync clock for unlimited FPS
 - Change the default difficulty level for song selection
+- Enable Discord Rich Presence integration
+- Disable stage backgrounds to increase performance
+- Bypass the game's VSync clock for unlimited FPS
 
 ## Installation
 
 1. Download and install [MelonLoader](https://melonwiki.xyz).
 2. Download the latest version of the mod from the [releases page](https://github.com/Ahriana/DeemoRebirth/releases).
-3. Extract the contents of the ZIP file to the game\'s `Mods` folder.
+3. Extract the contents of the ZIP file to the game's `Mods` folder.
 4. Launch the game and enjoy the new features!
 
 ## Configuration
 
-The mod includes a configuration file that can be used to customize the mod\'s features. The configuration file is located at `UserData/Reborn.cfg`.
+The mod includes a configuration file that can be used to customize the mod's features. The configuration file is located at `UserData/Reborn.cfg`.
+
+### Core category
+
+- **Mod Enabled**: Master toggle to enable or disable the mod.
 
 ### Competitive category
 
@@ -30,10 +35,14 @@ The mod includes a configuration file that can be used to customize the mod\'s f
 - **Replace Song Book Animations**: This will speed-up, replace and simplify SongBook animations for faster navigation etc.
 - **Default Difficulty**: Changes what difficulty will be selected in song select: Off = 0, Easy = 1, Normal = 2, Hard = 3.
 
+### Enhancements category
+
+- **Discord RP**: Enable Discord Rich Presence integration. Note: Requires "discord_game_sdk.dll" be placed in "UserLibs" folder of the game.
+
 ### Performance category
 
 - **Remove Gameplay Backgrounds**: Disable stage backgrounds to increase performance.
-- **Disable VSync**: Bypasses the game\'s VSync clock (Unlimited FPS).
+- **Disable VSync**: Bypasses the game's VSync clock (Unlimited FPS).
 
 To modify the configuration, open the `Reborn.cfg` file in a text editor and change the values as desired. Be sure to save the file before launching the game.
 
